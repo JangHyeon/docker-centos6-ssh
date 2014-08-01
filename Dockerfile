@@ -1,7 +1,7 @@
 #Dockerfile
 FROM centos:centos6
 MAINTAINER lemon <limengabc@163.com>
-RUN yum update
+RUN yum update -y
 RUN yum install -y openssh-server
 RUN ssh-keygen -q -N "" -t dsa -f /etc/ssh/ssh_host_dsa_key
 RUN ssh-keygen -q -N "" -t rsa -f /etc/ssh/ssh_host_rsa_key
